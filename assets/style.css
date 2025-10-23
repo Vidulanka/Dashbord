@@ -1,0 +1,52 @@
+/* Dark theme variables */
+:root {
+  --bg-color: #0b1221;
+  --card-bg: #0f1724;
+  --muted: #94a3b8;
+  --accent: #00bcd4;
+  --text: #e6eef6;
+  --card-border: rgba(255,255,255,0.04);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text);
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+h1 {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Card-like containers */
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+}
+
+/* Controls styling */
+label {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Summary stats */
+#summary-stats p {
+  margin: 6px 0;
+  color: var(--text);
+}
+
+/* Make Dash graphs blend into dark background */
+.js-plotly-plot .plotly {
+  background: transparent !important;
+}
+
+/* Responsive tweaks */
+@media (max-width: 800px) {
+  .controls-row { display:block !important; }
+  .controls-row > div { width:100% !important; }
+}
